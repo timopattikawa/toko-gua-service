@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+
+option go_package = "github.com/timopattikawa/master-service-tokogua";
+
+service DataProductServer {
+  rpc FindDataProductById(IdProduct) returns (Product);
+}
+
+message Product {
+  int64 id = 1;
+  string name = 2;
+  int64 price = 3;
+}
+
+message IdProduct {
+  int64 id = 1;
+}
