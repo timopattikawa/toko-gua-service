@@ -2,6 +2,7 @@ package domain
 
 import (
 	"context"
+
 	"github.com/timopattikawa/payment-gateway-service/internal/dto"
 )
 
@@ -19,6 +20,6 @@ type OrderRepository interface {
 
 type OrderUsecase interface {
 	OrderPayment(ctx context.Context, req dto.PaymentRequest) (dto.MidtransResponseSnap, error)
-	HandlerWebHookPayment(ctx context.Context, req string) (string, error)
+	HandlerWebHookPayment(ctx context.Context, req map[string]string) (string, error)
 	GetDetailOrderById(ctx context.Context, id int) (Order, error)
 }

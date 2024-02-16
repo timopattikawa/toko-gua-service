@@ -4,7 +4,7 @@
 // - protoc             v3.12.4
 // source: protos/product.proto
 
-package master_service_tokogua
+package payment_gateway_service
 
 import (
 	context "context"
@@ -46,7 +46,7 @@ func (c *dataProductServerClient) FindDataProductById(ctx context.Context, in *I
 	return out, nil
 }
 
-// DataProductServerServer is the client API for DataProductServer service.
+// DataProductServerServer is the server API for DataProductServer service.
 // All implementations must embed UnimplementedDataProductServerServer
 // for forward compatibility
 type DataProductServerServer interface {

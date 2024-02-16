@@ -55,7 +55,7 @@ func (o OrderHandler) webhookHandler(c *fiber.Ctx) error {
 		return exception.BadRequest{Message: "Bad Body not string"}
 	}
 
-	log.Println(midTransBody)
+	o.usecase.HandlerWebHookPayment(c.Context(), midTransBody)
 
 	return c.Status(fiber.StatusOK).JSON(dto.BaseResponse{
 		Status:  fiber.StatusOK,

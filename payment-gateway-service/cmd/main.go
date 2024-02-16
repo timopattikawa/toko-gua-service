@@ -5,6 +5,7 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/timopattikawa/payment-gateway-service/cmd/config"
+	dao "github.com/timopattikawa/payment-gateway-service/internal/dao/impl"
 	"github.com/timopattikawa/payment-gateway-service/internal/db"
 	error2 "github.com/timopattikawa/payment-gateway-service/internal/exception"
 	"github.com/timopattikawa/payment-gateway-service/internal/repository"
@@ -25,7 +26,9 @@ func main() {
 	productClient := pb.NewDataProductServerClient(rpcClient)
 	costumerClient := pb.NewCostumerDataServerClient(rpcClient)
 
-	orderUsecase := usecase.NewOrderUsecase(orderRepo, costumerClient, productClient, cfg)
+	midtransDao := dao.NewMidtransDao(cfg)
+
+	orderUsecase := usecase.NewOrderUsecase(orderRepo, costumerClient, productClient, cfg, midtransDao)
 
 	orderHandler := handler.NewOrderHandler(orderUsecase, cfg)
 

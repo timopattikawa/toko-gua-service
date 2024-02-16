@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = "github.com/timopattikawa/master-service-tokogua";
+option go_package = "github.com/timopattikawa/payment-gateway-service";
 
 service CostumerDataServer{
   rpc FindCostumerById(IdCostumer) returns (Costumer);

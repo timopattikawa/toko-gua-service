@@ -1,17 +1,14 @@
 package usecase
 
 import (
-	"bytes"
 	"context"
-	"encoding/base64"
 	"encoding/json"
-	"fmt"
 	"log"
-	"net/http"
 
 	"github.com/gofiber/fiber/v2"
 	uuid2 "github.com/google/uuid"
 	"github.com/timopattikawa/payment-gateway-service/cmd/config"
+	"github.com/timopattikawa/payment-gateway-service/internal/dao"
 	"github.com/timopattikawa/payment-gateway-service/internal/domain"
 	"github.com/timopattikawa/payment-gateway-service/internal/dto"
 	pb "github.com/timopattikawa/payment-gateway-service/protos"
@@ -22,6 +19,7 @@ type OrderUsecaseImpl struct {
 	costumerRPC pb.CostumerDataServerClient
 	productRPC  pb.DataProductServerClient
 	repo        domain.OrderRepository
+	midtrans    dao.MidtransDao
 }
 
 func (o OrderUsecaseImpl) OrderPayment(ctx context.Context, req dto.PaymentRequest) (dto.MidtransResponseSnap, error) {
@@ -54,41 +52,7 @@ func (o OrderUsecaseImpl) OrderPayment(ctx context.Context, req dto.PaymentReque
 		TotalAmount: int(req.Qty * int(product.Price)),
 	}
 
-	client := &http.Client{}
-
-	var payloadMidtransRequest = fmt.Sprintf(`{
-		"transaction_details": {
-			"order_id": "%s",
-			"gross_amount": %d
-		},
-		"credit_card":{
-			"secure" : %v
-		},
-		"customer_details": {
-			"name": "%s",
-			"email": "%s",
-			"phone": "08111222333"
-		}
-	}`, newOrder.UUID, newOrder.TotalAmount, true, costumer.CostumerName, costumer.CostumerEmail)
-
-	log.Println("Payload : ", payloadMidtransRequest)
-
-	reqToMidtrans, err := http.NewRequest("POST", "https://app.sandbox.midtrans.com/snap/v1/transactions",
-		bytes.NewBuffer([]byte(payloadMidtransRequest)))
-
-	if err != nil {
-		log.Println("Fail prepare req for midtrans")
-		return dto.MidtransResponseSnap{}, err
-	}
-
-	authString := base64.StdEncoding.EncodeToString([]byte(o.cfg.Midtrans.ServerKey + ":"))
-	log.Println(authString)
-	reqToMidtrans.Header.Add("Accept", "application/json")
-	reqToMidtrans.Header.Add("Content-Type", "application/json")
-	reqToMidtrans.Header.Add("Authorization",
-		"Basic "+authString)
-
-	resp, err := client.Do(reqToMidtrans)
+	resp, err := o.midtrans.DoRequestMidtransSnap(newOrder, costumer)
 	if err != nil {
 		return dto.MidtransResponseSnap{}, err
 	}
@@ -116,9 +80,15 @@ func (o OrderUsecaseImpl) OrderPayment(ctx context.Context, req dto.PaymentReque
 	return midtransResponse, nil
 }
 
-func (o OrderUsecaseImpl) HandlerWebHookPayment(ctx context.Context, req string) (string, error) {
-	//TODO implement me
-	panic("implement me")
+func (o OrderUsecaseImpl) HandlerWebHookPayment(ctx context.Context, req map[string]string) (string, error) {
+
+	params := req["order_id"] + req["status_code"] + req["gross_amount"]
+
+	if err := o.midtrans.DoCheckingMidtransWebhook(params, req["signature_key"]); err != nil {
+		return "Fail", err
+	}
+
+	return "OK", nil
 }
 
 func (o OrderUsecaseImpl) GetDetailOrderById(ctx context.Context, id int) (domain.Order, error) {
@@ -129,11 +99,13 @@ func (o OrderUsecaseImpl) GetDetailOrderById(ctx context.Context, id int) (domai
 func NewOrderUsecase(repository domain.OrderRepository,
 	costumer pb.CostumerDataServerClient,
 	product pb.DataProductServerClient,
-	cfg *config.Config) domain.OrderUsecase {
+	cfg *config.Config,
+	midtrans dao.MidtransDao) domain.OrderUsecase {
 	return &OrderUsecaseImpl{
 		repo:        repository,
 		productRPC:  product,
 		costumerRPC: costumer,
 		cfg:         cfg,
+		midtrans:    midtrans,
 	}
 }

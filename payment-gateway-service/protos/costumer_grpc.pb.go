@@ -4,7 +4,7 @@
 // - protoc             v3.12.4
 // source: protos/costumer.proto
 
-package master_service_tokogua
+package payment_gateway_service
 
 import (
 	context "context"
@@ -46,7 +46,7 @@ func (c *costumerDataServerClient) FindCostumerById(ctx context.Context, in *IdC
 	return out, nil
 }
 
-// CostumerDataServerServer is the client API for CostumerDataServer service.
+// CostumerDataServerServer is the server API for CostumerDataServer service.
 // All implementations must embed UnimplementedCostumerDataServerServer
 // for forward compatibility
 type CostumerDataServerServer interface {
