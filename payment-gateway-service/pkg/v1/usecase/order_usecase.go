@@ -85,6 +85,7 @@ func (o OrderUsecaseImpl) HandlerWebHookPayment(ctx context.Context, req map[str
 	params := req["order_id"] + req["status_code"] + req["gross_amount"]
 
 	if err := o.midtrans.DoCheckingMidtransWebhook(params, req["signature_key"]); err != nil {
+		log.Println("Failed to checking midtans webhook")
 		return "Fail", err
 	}
 

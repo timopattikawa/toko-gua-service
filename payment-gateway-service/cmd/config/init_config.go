@@ -29,7 +29,7 @@ type Config struct {
 }
 
 func InitConfiguration() *Config {
-	file, err := os.Open("config/config.yml")
+	file, err := os.Open("cmd/config/config.yml")
 	if err != nil {
 		log.Fatal("Failed to open config.yml")
 	}
