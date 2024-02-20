@@ -4,25 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68a70132-0f5d-4b4d-a65d-0520f82cc581" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../master-service-tokogua/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../master-service-tokogua/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e3280ddd-ce62-41d3-9645-c3061f7baea4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e3280ddd-ce62-41d3-9645-c3061f7baea4/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e3280ddd-ce62-41d3-9645-c3061f7baea4/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e3280ddd-ce62-41d3-9645-c3061f7baea4/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e3280ddd-ce62-41d3-9645-c3061f7baea4/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
+    <list default="true" id="68a70132-0f5d-4b4d-a65d-0520f82cc581" name="Changes" comment="Add Some Adjustment code and Unit test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/dao.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internal/dao/impl/midtrans_dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/impl/midtrans_dao.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/domain/order.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/domain/order.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/repository/order_repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/repository/order_repository.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/v1/handler/order_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/v1/handler/order_handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/v1/usecase/order_usecase.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/v1/usecase/order_usecase.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,36 +33,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultGoTemplateProperty": "Go File",
-    "Go Test.TestFindOrderById_FailToFind in github.com/timopattikawa/payment-gateway-service/internal/repository.executor": "Run",
-    "Go Test.TestFindOrderById_SuccessToFind in github.com/timopattikawa/payment-gateway-service/internal/repository.executor": "Run",
-    "Go Test.TestSaveOrder in github.com/timopattikawa/payment-gateway-service/internal/repository.executor": "Run",
-    "Go Test.TestSaveOrder_SuccessToSave in github.com/timopattikawa/payment-gateway-service/internal/repository.executor": "Coverage",
-    "Go Test.go test github.com/timopattikawa/payment-gateway-service/internal/repository.executor": "Coverage",
-    "Go Test.gobench github.com/timopattikawa/payment-gateway-service/internal/repository.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
-    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
-    "git-widget-placeholder": "main",
-    "go.import.settings.migrated": "true",
-    "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/home/timopattikawa/Documents/go/src/github.com/timopattikawa/toko-gua-service/payment-gateway-service/internal/domain",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultGoTemplateProperty&quot;: &quot;Go File&quot;,
+    &quot;Go Test.TestFindOrderById_FailToFind in github.com/timopattikawa/payment-gateway-service/internal/repository.executor&quot;: &quot;Run&quot;,
+    &quot;Go Test.TestFindOrderById_SuccessToFind in github.com/timopattikawa/payment-gateway-service/internal/repository.executor&quot;: &quot;Run&quot;,
+    &quot;Go Test.TestSaveOrder in github.com/timopattikawa/payment-gateway-service/internal/repository.executor&quot;: &quot;Run&quot;,
+    &quot;Go Test.TestSaveOrder_SuccessToSave in github.com/timopattikawa/payment-gateway-service/internal/repository.executor&quot;: &quot;Coverage&quot;,
+    &quot;Go Test.go test github.com/timopattikawa/payment-gateway-service/internal/repository.executor&quot;: &quot;Coverage&quot;,
+    &quot;Go Test.gobench github.com/timopattikawa/payment-gateway-service/internal/repository.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.automatic.dependencies.download&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/timopattikawa/Documents/go/src/github.com/timopattikawa/toko-gua-service/payment-gateway-service/internal/domain&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/internal/domain" />
@@ -163,6 +147,10 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add Some Adjustment code and Unit test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Some Adjustment code and Unit test" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

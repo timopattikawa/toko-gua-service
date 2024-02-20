@@ -13,7 +13,6 @@ import (
 	"github.com/timopattikawa/payment-gateway-service/internal/dao"
 	"github.com/timopattikawa/payment-gateway-service/internal/domain"
 	"github.com/timopattikawa/payment-gateway-service/internal/exception"
-	pb "github.com/timopattikawa/payment-gateway-service/protos"
 )
 
 type MidtransDaoImpl struct {
@@ -33,7 +32,7 @@ func (m MidtransDaoImpl) DoCheckingMidtransWebhook(params string, signatureKey s
 	return nil
 }
 
-func (m MidtransDaoImpl) DoRequestMidtransSnap(order domain.Order, costumer *pb.Costumer) (*http.Response, error) {
+func (m MidtransDaoImpl) DoRequestMidtransSnap(order domain.Order, costumer domain.Costumer) (*http.Response, error) {
 	client := &http.Client{
 		Timeout: 30 & time.Second,
 	}
