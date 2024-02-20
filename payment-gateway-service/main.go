@@ -26,9 +26,12 @@ func main() {
 	productClient := pb.NewDataProductServerClient(rpcClient)
 	costumerClient := pb.NewCostumerDataServerClient(rpcClient)
 
+	rpcCostumer := client.NewCostumerClientRPC(costumerClient)
+	rpcProduct := client.NewProductClientRPC(productClient)
+
 	midtransDao := dao.NewMidtransDao(cfg)
 
-	orderUsecase := usecase.NewOrderUsecase(orderRepo, costumerClient, productClient, cfg, midtransDao)
+	orderUsecase := usecase.NewOrderUsecase(orderRepo, rpcCostumer, rpcProduct, cfg, midtransDao)
 
 	orderHandler := handler.NewOrderHandler(orderUsecase, cfg)
 

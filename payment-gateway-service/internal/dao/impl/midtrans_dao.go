@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"time"
 
 	"github.com/timopattikawa/payment-gateway-service/cmd/config"
 	"github.com/timopattikawa/payment-gateway-service/internal/dao"
@@ -33,7 +34,9 @@ func (m MidtransDaoImpl) DoCheckingMidtransWebhook(params string, signatureKey s
 }
 
 func (m MidtransDaoImpl) DoRequestMidtransSnap(order domain.Order, costumer *pb.Costumer) (*http.Response, error) {
-	client := &http.Client{}
+	client := &http.Client{
+		Timeout: 30 & time.Second,
+	}
 
 	var payloadMidtransRequest = fmt.Sprintf(`{
 		"transaction_details": {

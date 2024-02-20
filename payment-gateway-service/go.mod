@@ -5,8 +5,16 @@ go 1.22.0
 require (
 	github.com/go-yaml/yaml v2.1.0+incompatible
 	github.com/lib/pq v1.10.9
+	github.com/stretchr/testify v1.8.4
 	google.golang.org/grpc v1.61.1
 	google.golang.org/protobuf v1.32.0
+)
+
+require (
+	github.com/DATA-DOG/go-sqlmock v1.5.2
+	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
 require (

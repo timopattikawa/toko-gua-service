@@ -14,12 +14,12 @@ type Order struct {
 }
 
 type OrderRepository interface {
-	SaveRepository(ctx context.Context, order Order) error
-	FindOrderById(ctx context.Context, id int) (Order, error)
+	SaveRepository(order Order) error
+	FindOrderById(id string) (Order, error)
 }
 
 type OrderUsecase interface {
 	OrderPayment(ctx context.Context, req dto.PaymentRequest) (dto.MidtransResponseSnap, error)
-	HandlerWebHookPayment(ctx context.Context, req map[string]string) (string, error)
+	HandlerWebHookPayment(eq map[string]string) (string, error)
 	GetDetailOrderById(ctx context.Context, id int) (Order, error)
 }

@@ -4,12 +4,24 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f2a35460-60fa-4faa-810c-cb5aeda800a5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="68a70132-0f5d-4b4d-a65d-0520f82cc581" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../master-service-tokogua/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../master-service-tokogua/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/config/init_config.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/config/init_config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/config/fiber_config.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e3280ddd-ce62-41d3-9645-c3061f7baea4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e3280ddd-ce62-41d3-9645-c3061f7baea4/storage_v2/_src_/database/postgres.edMnLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e3280ddd-ce62-41d3-9645-c3061f7baea4/storage_v2/_src_/database/postgres.edMnLQ/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e3280ddd-ce62-41d3-9645-c3061f7baea4/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e3280ddd-ce62-41d3-9645-c3061f7baea4/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dao/impl/midtrans_dao.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/dao/impl/midtrans_dao.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/domain/order.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/domain/order.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/repository/order_repository.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/repository/order_repository.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/v1/handler/order_handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/v1/handler/order_handler.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pkg/v1/usecase/order_usecase.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/v1/usecase/order_usecase.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,22 +29,35 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
   <component name="GOROOT" url="file:///usr/local/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 5
-}]]></component>
-  <component name="ProjectId" id="2cTjYLuCTeEtWIoClRNROO6hHOv" />
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2cXq2lo4vMqZ5fAY30M34YqONEn" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Go Build.go build github.com/timopattikawa/payment-gateway-service.executor": "Debug",
+    "DefaultGoTemplateProperty": "Go File",
+    "Go Test.TestFindOrderById_FailToFind in github.com/timopattikawa/payment-gateway-service/internal/repository.executor": "Run",
+    "Go Test.TestFindOrderById_SuccessToFind in github.com/timopattikawa/payment-gateway-service/internal/repository.executor": "Run",
+    "Go Test.TestSaveOrder in github.com/timopattikawa/payment-gateway-service/internal/repository.executor": "Run",
+    "Go Test.TestSaveOrder_SuccessToSave in github.com/timopattikawa/payment-gateway-service/internal/repository.executor": "Coverage",
+    "Go Test.go test github.com/timopattikawa/payment-gateway-service/internal/repository.executor": "Coverage",
+    "Go Test.gobench github.com/timopattikawa/payment-gateway-service/internal/repository.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
@@ -42,7 +67,7 @@
     "git-widget-placeholder": "main",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
-    "last_opened_file_path": "/home/timopattikawa",
+    "last_opened_file_path": "/home/timopattikawa/Documents/go/src/github.com/timopattikawa/toko-gua-service/payment-gateway-service/internal/domain",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -55,42 +80,76 @@
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/internal/domain" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+  <component name="RunManager" selected="Go Test.go test github.com/timopattikawa/payment-gateway-service/internal/repository">
+    <configuration name="TestFindOrderById_FailToFind in github.com/timopattikawa/payment-gateway-service/internal/repository" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="payment-gateway-service" />
-      <working_directory value="$PROJECT_DIR$" />
-      <go_parameters value="-i" />
-      <kind />
+      <working_directory value="$PROJECT_DIR$/internal/repository" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/timopattikawa/payment-gateway-service/internal/repository" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestFindOrderById_FailToFind\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build github.com/timopattikawa/payment-gateway-service" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TestFindOrderById_SuccessToFind in github.com/timopattikawa/payment-gateway-service/internal/repository" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="payment-gateway-service" />
-      <working_directory value="$PROJECT_DIR$" />
+      <working_directory value="$PROJECT_DIR$/internal/repository" />
+      <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="github.com/timopattikawa/payment-gateway-service" />
+      <package value="github.com/timopattikawa/payment-gateway-service/internal/repository" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/main.go" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestFindOrderById_SuccessToFind\E$" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+    <configuration name="TestSaveOrder_SuccessToSave in github.com/timopattikawa/payment-gateway-service/internal/repository" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="payment-gateway-service" />
-      <working_directory value="$PROJECT_DIR$" />
-      <go_parameters value="-i" />
-      <kind />
+      <working_directory value="$PROJECT_DIR$/internal/repository" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/timopattikawa/payment-gateway-service/internal/repository" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestSaveOrder_SuccessToSave\E$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test github.com/timopattikawa/payment-gateway-service/internal/repository" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="payment-gateway-service" />
+      <working_directory value="$PROJECT_DIR$/internal/repository" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/timopattikawa/payment-gateway-service/internal/repository" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
       <method v="2" />
     </configuration>
+    <configuration name="gobench github.com/timopattikawa/payment-gateway-service/internal/repository" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="payment-gateway-service" />
+      <working_directory value="$PROJECT_DIR$/internal/repository" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="github.com/timopattikawa/payment-gateway-service/internal/repository" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gobench" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build github.com/timopattikawa/payment-gateway-service" />
+        <item itemvalue="Go Test.go test github.com/timopattikawa/payment-gateway-service/internal/repository" />
+        <item itemvalue="Go Test.TestFindOrderById_FailToFind in github.com/timopattikawa/payment-gateway-service/internal/repository" />
+        <item itemvalue="Go Test.TestFindOrderById_SuccessToFind in github.com/timopattikawa/payment-gateway-service/internal/repository" />
+        <item itemvalue="Go Test.TestSaveOrder_SuccessToSave in github.com/timopattikawa/payment-gateway-service/internal/repository" />
+        <item itemvalue="Go Test.gobench github.com/timopattikawa/payment-gateway-service/internal/repository" />
       </list>
     </recent_temporary>
   </component>
@@ -107,5 +166,9 @@
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/payment_gateway_service$TestSaveOrder_SuccessToSave_in_github_com_timopattikawa_payment_gateway_service_internal_repository.out" NAME="TestSaveOrder_SuccessToSave in github.com/timopattikawa/payment-gateway-service/internal/repository Coverage Results" MODIFIED="1708311991492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/payment_gateway_service$go_test_github_com_timopattikawa_payment_gateway_service_internal_repository.out" NAME="go test github.com/timopattikawa/payment-gateway-service/internal/repository Coverage Results" MODIFIED="1708313383688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
